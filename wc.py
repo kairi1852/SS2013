@@ -1,6 +1,7 @@
 import sys
 
-f = sys.stdin
+filePath=sys.argv[1]
+f=open(filePath)
 s = f.read()
 f.close()
 
