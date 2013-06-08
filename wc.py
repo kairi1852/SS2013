@@ -1,11 +1,13 @@
 import sys
+import re
 
 filePath=sys.argv[1]
 f=open(filePath)
 s = f.read()
 f.close()
+s_sub=re.sub(re.compile("[^A-Za-z]")," ",s.lower())
 
-words = s.split()
+words = s_sub.split()
 
 d = {}
 
@@ -25,6 +27,3 @@ for k in sored_keys:
         break
     print k, ": ", d[k]
     i += 1
-
-
-
